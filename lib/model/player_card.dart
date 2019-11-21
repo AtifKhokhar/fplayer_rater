@@ -15,17 +15,28 @@ class _PlayerCardState extends State<PlayerCard> {
   Widget build(BuildContext context) {
   return Center(
     child: Card(
-      child: InkWell(
-        splashColor: (_isHighlyRated ? Colors.green : Colors.red.withAlpha(30)),
-        onTap: () {
-          print('Card tapped.');
-        },
-        child: Container(
-          width: 300,
-          height: 100,
-          child: Text('A card that can be tapped'),
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+             ListTile(
+              leading: Icon(Icons.stars),
+              title: Text(widget.player.name),
+              subtitle: Text('Position: ' + widget.player.position  + ' Club: ' + widget.player.club),
+
+            )
+          ]
       ),
+//      child: InkWell(
+//        splashColor: (_isHighlyRated ? Colors.green : Colors.red.withAlpha(30)),
+//        onTap: () {
+//          print('Card tapped.');
+//        },
+//        child: Container(
+//          width: 300,
+//          height: 100,
+//          child: Text(widget.player.name),
+//        ),
+//      ),
     ),
   );
  }

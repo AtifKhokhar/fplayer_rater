@@ -8,13 +8,7 @@ class FPlayer_Rater extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Football Player Rater',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red[500],
-          title: Text("Football Player Rater"),
-        ),
-        body: Home(),
-      ),
+      home: new Home()
     );
   }
 }

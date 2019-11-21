@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:FPlayer_Rater/player_card.dart';
+import 'package:fplayer_rater/model/player_card.dart';
 import 'package:fplayer_rater/model/player_model.dart';
 
 class PlayerList extends StatelessWidget {
