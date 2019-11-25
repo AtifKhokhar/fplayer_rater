@@ -11,6 +11,9 @@ class PlayerCard extends StatefulWidget {
 
 class _PlayerCardState extends State<PlayerCard> {
   bool _isHighlyRated = true;
+  double _value = 0.0;
+  void _setvalue(double value) => setState(() => _value = value);
+
 
   Widget build(BuildContext context) {
   return Center(
@@ -22,21 +25,11 @@ class _PlayerCardState extends State<PlayerCard> {
               leading: Icon(Icons.stars),
               title: Text(widget.player.name),
               subtitle: Text('Position: ' + widget.player.position  + ' Club: ' + widget.player.club),
-
-            )
+            ),
+             new Text(_value.toStringAsFixed(1)),
+             new Slider(min: 0.0, max: 100, value: _value, onChanged: _setvalue),
           ]
       ),
-//      child: InkWell(
-//        splashColor: (_isHighlyRated ? Colors.green : Colors.red.withAlpha(30)),
-//        onTap: () {
-//          print('Card tapped.');
-//        },
-//        child: Container(
-//          width: 300,
-//          height: 100,
-//          child: Text(widget.player.name),
-//        ),
-//      ),
     ),
   );
  }
